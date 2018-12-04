@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var valuesLabel: UILabel!
+    @IBOutlet weak var valuesTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,16 +44,16 @@ class ViewController: UIViewController {
         print("To: \(to)")
         print("N-times: \(howMany)")
         
+        var allValues = String()
+        
         for _ in 0 ... 1000
         {
             let rotated = rotator.rotate()
-            
-            Helper.runAsyncMain {
-                self.valuesLabel.text = "\(rotated)"
-            }
-            
+            allValues = "\(allValues)\n\(rotated)"
             print(rotated)
         }
+        
+        valuesTextView.text = allValues
         
         print("---")
         print("---")
