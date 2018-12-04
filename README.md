@@ -14,7 +14,7 @@ Helper.swift
 Note
 
 ```swift
-// The results are extremely random, always between min-max values.
+// The results are very random, always between min-max values.
 // 'extraInfoHowMany' parameter pseudo-defines (+randomly) how 
 // the values will be distributed. So it must be set wisely.
 ```
