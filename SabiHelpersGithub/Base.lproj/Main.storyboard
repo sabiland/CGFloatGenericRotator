@@ -28,15 +28,27 @@
                                     <action selector="makeRotation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g0C-yh-KpD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="...values..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1s-sn-VIY">
+                                <rect key="frame" x="0.0" y="646" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C1s-sn-VIY" secondAttribute="trailing" id="AXw-nA-kIk"/>
                             <constraint firstItem="l6r-BK-pPl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JC7-DE-uXx"/>
                             <constraint firstItem="l6r-BK-pPl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OBl-wJ-Ztc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C1s-sn-VIY" secondAttribute="bottom" id="c7O-iz-uTx"/>
+                            <constraint firstItem="C1s-sn-VIY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e4v-GD-ax7"/>
                             <constraint firstItem="l6r-BK-pPl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lfG-lI-Nmt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="valuesLabel" destination="C1s-sn-VIY" id="2Hi-gl-IdV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

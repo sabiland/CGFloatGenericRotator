@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var valuesLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -44,7 +46,13 @@ class ViewController: UIViewController {
         
         for _ in 0 ... 1000
         {
-            print(rotator.rotate())
+            let rotated = rotator.rotate()
+            
+            Helper.runAsyncMain {
+                self.valuesLabel.text = "\(rotated)"
+            }
+            
+            print(rotated)
         }
         
         print("---")

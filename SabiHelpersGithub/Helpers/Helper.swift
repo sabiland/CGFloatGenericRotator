@@ -10,6 +10,13 @@ import UIKit
 
 final class Helper {
     
+    static func runAsyncMain(_ block: @escaping () -> Void)
+    {
+        DispatchQueue.main.async {
+            block()
+        }
+    }
+    
     static func randomFifty(action: () -> Void)
     {
         if randomFifty()
