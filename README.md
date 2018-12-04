@@ -1,5 +1,7 @@
 # GenericCGFloatRotator - iOS (Swift)
 
+(I needed this since ever only for CGFloat, so I didn't make fully-generic for all number types. If someone has time, be my guest to upgrade it)
+
 I use this helper class in many of my Apps for generating/rotating/scrolling **random** CGFloat values **between** min-max.
 This will be useful for you if you really need **many random** values between min-max.
 
