@@ -22,19 +22,19 @@ Usage
 ```swift
 let from: CGFloat = 0
 let to: CGFloat = 1
-let howMany = Helper.randomBetween(10, max: 1000, includeMax: true)
+let extraInfoHowMany = Helper.randomBetween(10, max: 1000, includeMax: true)
 
 let rotator = GenericCGFloatRotator(
-    rotateValue: Helper.randomMinAddMax(from, max: (to - from)),
+    rotateValue: Helper.randomMinAddMax(from, max: (to - from)),    // Initial value
     from: from,
     to: to,
-    extraInfoHowMany: howMany,
-    modifyValue: true
+    extraInfoHowMany: extraInfoHowMany,
+    modifyValue: true   // If false, initial value 'rotateValue' will be FIXED
 )
 
 print("From: \(from)")
 print("To: \(to)")
-print("N-times: \(howMany)")
+print("ExtraInfoHowMany: \(extraInfoHowMany)")
 
 var allValues = String()
 
