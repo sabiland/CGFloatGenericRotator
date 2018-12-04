@@ -53,11 +53,14 @@ class ViewController: UIViewController {
             print(rotated)
         }
         
-        valuesTextView.text = allValues
+        print("---")
+        print("---")
+        print("---")
         
-        print("---")
-        print("---")
-        print("---")
+        Helper.runAsyncMain {
+            self.valuesTextView.text = allValues
+            self.valuesTextView.setContentOffset(.zero, animated: true)
+        }
         
     }
     
