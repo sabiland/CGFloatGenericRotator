@@ -1,21 +1,38 @@
-# TrippyBackgrounds - iOS
+# CGFloatGenericRotator - iOS (Swift)
 
-For the recent iOS game I am developing I wrote a simple helper class for my game to generate totaly random image for a *scene background*. I think the outcome is really nice and useful for backgrounds, textures, etc.
+I use this simple class in many of my Apps for generating/rotating CGFloat min-max values.
 
-So I've uploaded a sample SpriteKit project if anyone would be interested to use it.
-
-Class responsible for creating image is
+Files:
 
 ```swift
-SabilandTB.swift
+Extensions.swift
+GenericCGFloatRotator.swift
+Helper.swift
 ```
 
-Usage (generated image is **SQUARE** -> *max(width, height)*)
+Usage
 
 ```swift
-// NOTE: WIDTH and HEIGHT must be >= 1.0
-let generator = SabilandTB(width: 500.0, height: 200.0)
-let trippyImage = generator.SabilandTrippyBackground
+let from: CGFloat = 0
+let to: CGFloat = 1
+let howMany = Helper.randomBetween(10, max: 10000, includeMax: true)
+
+let rotator = GenericCGFloatRotator(
+    rotateValue: Helper.random01(),
+    from: from,
+    to: to,
+    extraInfoHowMany: howMany,
+    modifyValue: true
+)
+
+print("From: \(from)")
+print("To: \(to)")
+print("N-times: \(howMany)")
+
+for _ in 0 ... 1000
+{
+    print(rotator.rotate())
+}
 ```
 
 Example how to use it in a SpriteKit game as a background image
