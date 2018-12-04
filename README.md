@@ -46,4 +46,13 @@ for _ in 0 ... 1000
     allValues = "\(allValues)\n\(rotated)"
     print(rotated)
 }
+
+print("---")
+print("---")
+print("---")
+
+Helper.runAsyncMain {
+    self.valuesTextView.text = allValues
+    self.valuesTextView.setContentOffset(.zero, animated: true)
+}
 ```
