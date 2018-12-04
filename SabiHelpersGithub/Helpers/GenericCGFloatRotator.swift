@@ -33,7 +33,7 @@ final class GenericCGFloatRotator {
         self.rotateValue = rotateValue
         self.from = from
         self.to = to
-        self.extraInfoHowMany = extraInfoHowMany
+        self.extraInfoHowMany = abs(extraInfoHowMany)
         self.modifyValue = modifyValue
         
         // SETUP
