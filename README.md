@@ -150,3 +150,9 @@ final class ColorRotator {
     
 }
 ```
+
+![Alt text](https://i.imgur.com/rTD6x0j.jpg)
+
+![Alt text](https://i.imgur.com/K0iekT2.jpg)
+
+![Alt text](https://i.imgur.com/sHJIrOv.jpg)
