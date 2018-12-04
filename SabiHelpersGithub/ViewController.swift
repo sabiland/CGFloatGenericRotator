@@ -19,8 +19,9 @@ class ViewController: UIViewController {
     
     private func setupStart()
     {
-        
-        
+        let seed:Int = Int(arc4random_uniform(UInt32(Int32.max)))
+        // SET random SEED !!!
+        srand48(seed)
     }
     
     @IBAction func makeRotation(_ sender: Any) {
