@@ -42,7 +42,7 @@ var allValues = String()
 
 for _ in 0 ... 1000
 {
-    let rotated = rotator.rotate()
+    let rotated = rotator.rotate()  // ROTATE -> get new value
     allValues = "\(allValues)\n\(rotated)"
     print(rotated)
 }
