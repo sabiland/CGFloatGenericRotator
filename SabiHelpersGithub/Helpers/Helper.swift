@@ -77,6 +77,16 @@ final class Helper {
         return r;
     }
     
+    static func randomMinAddMax(_ min: CGFloat, max: CGFloat) -> CGFloat
+    {
+        return min + random01Max(max)
+    }
+    
+    static func random01Max(_ max: CGFloat) -> CGFloat
+    {
+        return max * random01()
+    }
+    
     static func randomInt(max: Int? = nil) -> Int
     {
         var rint: Int = 0

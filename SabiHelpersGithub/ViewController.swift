@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         let howMany = Helper.randomBetween(10, max: 10000, includeMax: true)
         
         let rotator = GenericCGFloatRotator(
-            rotateValue: Helper.random01(),
+            rotateValue: Helper.randomMinAddMax(from, max: (to - from)),
             from: from,
             to: to,
             extraInfoHowMany: howMany,
