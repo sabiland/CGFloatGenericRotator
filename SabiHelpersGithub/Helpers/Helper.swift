@@ -62,9 +62,6 @@ final class Helper {
     {
         var r:Int = Int(min) + ((Helper.randomInt() % Int(max - min)))
         
-        // OBSOLETE BECAUSE OF IN-ONE-PLACE RANDOM CALCULATION
-        //var r:Int = Int(min + (arc4random() % (max - min)))
-        
         if r < Int(min)
         {
             r = Int(min)
@@ -97,9 +94,6 @@ final class Helper {
         }
         else
         {
-            // NOTE: !!! HERE MUST BE UInt32(!!!!!!!).max -> IF NOT THIS IS NOT WORKING OK !!!!
-            // NOTE: !!! HERE MUST BE UInt32(!!!!!!!).max -> IF NOT THIS IS NOT WORKING OK !!!!
-            // NOTE: !!! HERE MUST BE UInt32(!!!!!!!).max -> IF NOT THIS IS NOT WORKING OK !!!!
             rint = Int(random01() * CGFloat(UInt32.max))
         }
         
