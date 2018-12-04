@@ -1,13 +1,20 @@
 # CGFloatGenericRotator - iOS (Swift)
 
-I use this simple class in many of my Apps for generating/rotating CGFloat min-max values.
+I use this simple class in many of my Apps for generating/rotating/scrolling random CGFloat values **between** min-max.
 
-Files:
+Files
 
 ```swift
 Extensions.swift
 GenericCGFloatRotator.swift
 Helper.swift
+```
+
+Note
+
+```swift
+// The results are very random, always between min-max values.
+// 'extraInfoHowMany' parameter pseudo-defines for how many 'entities' you need vaues
 ```
 
 Usage
