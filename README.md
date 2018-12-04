@@ -56,3 +56,95 @@ Helper.runAsyncMain {
     self.valuesTextView.setContentOffset(.zero, animated: true)
 }
 ```
+
+Example of usage (ColorRotator) how to get super-random color-transitions one after another
+
+```swift
+
+// To get new color -> func rotate() -> UIColor
+
+final class ColorRotator {
+    
+    private var color: UIColor
+    
+    private let extraInfoHowMany: Int
+    private let modifyValue: Bool
+    
+    private let redRotator: GenericCGFloatRotator
+    private let greenRotator: GenericCGFloatRotator
+    private let blueRotator: GenericCGFloatRotator
+    private let alphaRotator: GenericCGFloatRotator
+    
+    init(startingColor: UIColor, modifyValue: Bool, extraInfoHowMany: Int)
+    {
+        self.color = startingColor
+        self.modifyValue = modifyValue
+        self.extraInfoHowMany = extraInfoHowMany
+        
+        var r: CGFloat = 0
+        var g: CGFloat = 0
+        var b: CGFloat = 0
+        var a: CGFloat = 0
+        self.color.getRed(&r, green: &g, blue: &b, alpha: &a)
+        
+        // MOST common settings for color scrolling - Scroll RGB && NOT-ALPHA
+        // MOST common settings for color scrolling - Scroll RGB && NOT-ALPHA
+        // MOST common settings for color scrolling - Scroll RGB && NOT-ALPHA
+        var modifyRed = true
+        var modifyGreen = true
+        var modifyBlue = true
+        var modifyAlpha = false
+        
+        Helper.randomFifty {
+            
+            // Randomize modifiying settings
+            // Randomize modifiying settings
+            // Randomize modifiying settings
+            modifyRed = Helper.randomFifty()
+            modifyGreen = Helper.randomFifty()
+            modifyBlue = Helper.randomFifty()
+            modifyAlpha = Helper.randomFifty()
+            
+        }
+        
+        redRotator = GenericCGFloatRotator(
+            rotateValue: r,
+            extraInfoHowMany: self.extraInfoHowMany,
+            modifyValue: modifyRed
+        )
+        greenRotator = GenericCGFloatRotator(
+            rotateValue: g,
+            extraInfoHowMany: self.extraInfoHowMany,
+            modifyValue: modifyGreen
+        )
+        blueRotator = GenericCGFloatRotator(
+            rotateValue: b,
+            extraInfoHowMany: self.extraInfoHowMany,
+            modifyValue: modifyBlue
+        )
+        
+        alphaRotator = GenericCGFloatRotator(
+            rotateValue: a,
+            extraInfoHowMany: self.extraInfoHowMany,
+            modifyValue: modifyAlpha
+        )
+        
+    }
+    
+    func rotate() -> UIColor
+    {
+        if modifyValue
+        {
+            color = UIColor(
+                red: redRotator.rotate(),
+                green: greenRotator.rotate(),
+                blue: blueRotator.rotate(),
+                alpha: alphaRotator.rotate()
+            )
+        }
+        
+        return color
+    }
+    
+}
+```
