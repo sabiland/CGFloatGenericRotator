@@ -57,7 +57,7 @@ Helper.runAsyncMain {
 }
 ```
 
-Example of usage (ColorRotator) how to get super-random color-transitions one after another
+Example of usage (ColorRotator) how to get super-random colors (transitions) one after another
 
 ```swift
 
