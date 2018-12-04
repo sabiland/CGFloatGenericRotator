@@ -54,7 +54,10 @@ final class GenericCGFloatRotator {
         // NOTE: Divisor must start from AT LEAST 1 -> So we do not get Zero division
         // NOTE: Divisor must start from AT LEAST 1 -> So we do not get Zero division
         // Set value modifier
-        valueModifier = 1 / CGFloat(Helper.randomBetween(1, max: variationFactor, includeMax: true))
+        // Set value modifier
+        // Set value modifier
+        let factorForCalculatingModifier = (to - from)
+        valueModifier = factorForCalculatingModifier / CGFloat(Helper.randomBetween(1, max: variationFactor, includeMax: true))
         
         // Random up/down start
         valueModifier *= Helper.randomOneOrMinusOne()

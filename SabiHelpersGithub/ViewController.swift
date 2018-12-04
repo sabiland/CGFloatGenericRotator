@@ -28,8 +28,8 @@ class ViewController: UIViewController {
     
     @IBAction func makeRotation(_ sender: Any) {
         
-        let from: CGFloat = 0
-        let to: CGFloat = 1
+        let from: CGFloat = -30
+        let to: CGFloat = 80
         let howMany = Helper.randomBetween(10, max: 10000, includeMax: true)
         
         let rotator = GenericCGFloatRotator(
